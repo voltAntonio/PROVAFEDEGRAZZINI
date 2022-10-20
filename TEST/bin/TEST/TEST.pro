@@ -8,28 +8,24 @@ CONFIG += c++11
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-INCLUDEPATH +=  ../testLib\
-                ../Somma
+INCLUDEPATH +=  ../../testlib/square ../../testlib/sum  # Ogni .. che usi ti buttano fuori di una directory.
 
 CONFIG(debug, debug|release) {
-    LIBS += -L../testLib/debug -ltestlib\
-            -L../Somma/debug -lsomma
+    LIBS += -L../../testlib/square/debug -ltest\
+            -L../../testlib/sum/debug -ltest
 
 } else {
-    LIBS += -L../testLib/release -ltestlib\
-            -L../Somma/release -lsomma
+    LIBS += -L../../testlib/square/debug -ltest\
+            -L../../testlib/sum/debug -ltest
 }
 
 
 SOURCES += \
-    main.cpp \
-    mainwindow.cpp
+    main.cpp
 
-HEADERS += \
-    mainwindow.h
+HEADERS +=
 
-FORMS += \
-    mainwindow.ui
+FORMS +=
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
