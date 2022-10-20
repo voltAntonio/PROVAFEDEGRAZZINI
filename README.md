@@ -1,2 +1,0 @@
-# PROVAFEDEGRAZZINI
-prova di Efthymia

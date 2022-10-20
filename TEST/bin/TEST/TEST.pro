@@ -11,12 +11,12 @@ CONFIG += c++11
 INCLUDEPATH +=  ../../testlib/square ../../testlib/sum  # Ogni .. che usi ti buttano fuori di una directory.
 
 CONFIG(debug, debug|release) {
-    LIBS += -L../../testlib/square/debug -ltest\
-            -L../../testlib/sum/debug -ltest
+    LIBS += -L../../testlib/square/debug -lsquare
+    LIBS += -L../../testlib/sum/debug -lsum
 
 } else {
-    LIBS += -L../../testlib/square/debug -ltest\
-            -L../../testlib/sum/debug -ltest
+    LIBS += -L../../testlib/square/debug -lsquare
+    LIBS += -L../../testlib/sum/debug -lsum
 }
 
 
