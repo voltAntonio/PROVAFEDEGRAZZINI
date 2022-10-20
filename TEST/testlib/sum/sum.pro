@@ -3,7 +3,7 @@ CONFIG -= core gui
 TEMPLATE = lib
 CONFIG += staticlib
 
-DEFINES += SOMMA_LIBRARY
+#DEFINES += SOMMA_LIBRARY
 
 CONFIG += c++11
 
@@ -12,17 +12,17 @@ QMAKE_CXXFLAGS += -std=c++11
 
 unix:{
     CONFIG(debug, debug|release) {
-        TARGET = debug/somma
+        TARGET = debug/sum
     } else {
-        TARGET = release/somma
+        TARGET = release/sum
     }
 }
 win32:{
-    TARGET = somma
+    TARGET = sum
 }
 
 SOURCES += \
-    somma.cpp
+    sum.cpp
 
 HEADERS += \
-    somma.h
+    sum.h

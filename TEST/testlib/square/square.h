@@ -1,13 +1,13 @@
-#ifndef TESTLIB_H
-#define TESTLIB_H
+#ifndef SQUARE_H
+#define SQUARE_H
 
 
-class  TestLib
+class  Square
 {
 public:
-    TestLib();
+    Square();
 
     float test(float a);
 };
 
-#endif // TESTLIB_H
+#endif // SQUARE_H

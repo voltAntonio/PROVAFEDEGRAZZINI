@@ -11,7 +11,7 @@ CONFIG -= core gui
 TEMPLATE = lib
 CONFIG += staticlib
 
-DEFINES += TESTLIB_LIBRARY
+#DEFINES += TESTLIB_LIBRARY
 
 CONFIG += c++11
 
@@ -20,18 +20,18 @@ QMAKE_CXXFLAGS += -std=c++11
 
 unix:{
     CONFIG(debug, debug|release) {
-        TARGET = debug/testlib
+        TARGET = debug/square
     } else {
-        TARGET = release/testlib
+        TARGET = release/square
     }
 }
 win32:{
-    TARGET = testlib
+    TARGET = square
 }
 
 SOURCES += \
-    testlib.cpp
+    square.cpp
 
 HEADERS += \
-    testlib.h
+    square.h
 

@@ -1,10 +1,10 @@
-#include "somma.h"
+#include "sum.h"
 
-Somma::Somma()
+Sum::Sum()
 {
 }
 
-float Somma::Aggiunta(float x)
+float Sum::test(float x)
 {
     return x + x;
 }

@@ -1,11 +1,11 @@
-#include "testlib.h"
+#include "square.h"
 
-TestLib::TestLib()
+Square::Square()
 {
 }
 
 
-float TestLib::test(float a)
+float Square::test(float a)
 {
     return a*a;
 }

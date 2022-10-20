@@ -1,13 +1,13 @@
-#ifndef SOMMA_H
-#define SOMMA_H
+#ifndef SUM_H
+#define SUM_H
 
 
-class Somma
+class Sum
 {
 public:
-    Somma();
+    Sum();
 
-    float Aggiunta(float x);
+    float test(float x);
 };
 
-#endif // SOMMA_H
+#endif // SUM_H
