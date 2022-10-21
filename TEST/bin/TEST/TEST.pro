@@ -11,21 +11,22 @@ CONFIG += c++11
 INCLUDEPATH +=  ../../testlib/square ../../testlib/sum  # Ogni .. che usi ti buttano fuori di una directory.
 
 CONFIG(debug, debug|release) {
-    LIBS += -L../../testlib/square/debug -lsquare
-    LIBS += -L../../testlib/sum/debug -lsum
+    LIBS += -L../../testlib/square/debug -lsquare \
+            -L../../testlib/sum/debug -lsum
 
 } else {
-    LIBS += -L../../testlib/square/debug -lsquare
-    LIBS += -L../../testlib/sum/debug -lsum
+    LIBS += -L../../testlib/square/debug -lsquare \
+            -L../../testlib/sum/debug -lsum
 }
 
 
 SOURCES += \
-    main.cpp
+    main.cpp \
+    mainwindow.cpp
 
-HEADERS +=
+HEADERS += mainwindow.h
 
-FORMS +=
+FORMS += mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -1,8 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "QMessageBox"
-#include "testlib.h"
-#include "somma.h"
+#include "square.h"
+#include "sum.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -33,8 +33,8 @@ void MainWindow::on_squareButton_released()
         return;
     }
 
-    TestLib myLib;
-    float result = myLib.test(x);
+    Square mySquareLib;
+    float result = mySquareLib.test(x);
     ui->outputEdit->setText(QString::number(result));
 }
 
@@ -55,8 +55,8 @@ void MainWindow::on_doubleButton_released()
         return;
     }
 
-    Somma somLib;
-    float result = somLib.Aggiunta(x);
+    Sum mySumLib;
+    float result = mySumLib.test(x);
     ui->outputEdit->setText(QString::number(result));
 }
 
