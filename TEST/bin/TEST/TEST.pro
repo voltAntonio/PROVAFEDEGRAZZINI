@@ -15,8 +15,8 @@ CONFIG(debug, debug|release) {
             -L../../testlib/sum/debug -lsum
 
 } else {
-    LIBS += -L../../testlib/square/debug -lsquare \
-            -L../../testlib/sum/debug -lsum
+    LIBS += -L../../testlib/square/release -lsquare \
+            -L../../testlib/sum/release -lsum
 }
 
 
