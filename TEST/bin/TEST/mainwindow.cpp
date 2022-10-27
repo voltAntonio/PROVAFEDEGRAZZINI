@@ -16,9 +16,8 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-float risul;
 
-bool MainWindow::checkIsNumber(QString xString)
+bool MainWindow::checkIsNumber(QString xString, float *p)
 {
     if(xString == "")
     {
@@ -26,7 +25,7 @@ bool MainWindow::checkIsNumber(QString xString)
         return false;
     }
     bool isNumber = true;
-    risul = xString.toFloat(&isNumber);
+    *p = xString.toFloat(&isNumber);
     if(!isNumber)
     {
         QMessageBox::warning(this,"Warning","Wrong number");
@@ -36,54 +35,25 @@ bool MainWindow::checkIsNumber(QString xString)
 
 void MainWindow::on_squareButton_released()
 {
-    //QString xString = ui->inputEdit->text();
-    /*
-    if(xString == "")
-    {
-        QMessageBox::warning(this,"Warning","Missing number");
-        return;
-    }
-    bool isNumber;
-    float x = xString.toFloat(&isNumber);
-    if(!isNumber)
-    {
-        QMessageBox::warning(this,"Warning","Wrong number");
-        return;
-    }
-    */
-
-    if(checkIsNumber(ui->inputEdit->text()))
+    float result;
+    if(checkIsNumber(ui->inputEdit->text(), &result))
     {
         Square mySquareLib;
         //float x = ui->inputEdit->text().toFloat();
-        mySquareLib.test(&risul);
-        ui->outputEdit->setText(QString::number(risul));
+        mySquareLib.test(&result);
+        ui->outputEdit->setText(QString::number(result));
     }
 }
 
 
 void MainWindow::on_doubleButton_released()
 {
-    /*
-    QString xString = ui->inputEdit->text();
-    if(xString == "")
-    {
-        QMessageBox::warning(this,"Warning","Missing number");
-        return;
-    }
-    bool isNumber;
-    float x = xString.toFloat(&isNumber);
-    if(!isNumber)
-    {
-        QMessageBox::warning(this,"Warning","Wrong number");
-        return;
-    }
-    */
-    if(checkIsNumber(ui->inputEdit->text()))
+    float result;
+    if(checkIsNumber(ui->inputEdit->text(), &result))
     {
         Sum mySumLib;
         //float x = ui->inputEdit->text().toFloat();
-        mySumLib.test(&risul);
-        ui->outputEdit->setText(QString::number(risul));
+        mySumLib.test(&result);
+        ui->outputEdit->setText(QString::number(result));
     }
 }

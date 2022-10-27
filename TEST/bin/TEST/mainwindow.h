@@ -16,7 +16,7 @@ public:
     ~MainWindow();
 
 private slots:
-    bool checkIsNumber(QString xString);
+    bool checkIsNumber(QString xString, float *p);
 
     void on_squareButton_released();
 
