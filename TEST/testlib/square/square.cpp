@@ -5,7 +5,7 @@ Square::Square()
 }
 
 
-float Square::test(float a)
+void Square::test(float *a)
 {
-    return a*a;
+    *a = *a * *a;
 }

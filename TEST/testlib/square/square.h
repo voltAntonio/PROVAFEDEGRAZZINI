@@ -7,7 +7,7 @@ class  Square
 public:
     Square();
 
-    float test(float a);
+    void test(float *a);
 };
 
 #endif // SQUARE_H

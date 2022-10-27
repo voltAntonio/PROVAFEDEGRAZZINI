@@ -16,6 +16,8 @@ public:
     ~MainWindow();
 
 private slots:
+    bool checkIsNumber(QString xString);
+
     void on_squareButton_released();
 
     void on_doubleButton_released();
