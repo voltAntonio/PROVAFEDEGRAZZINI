@@ -17,7 +17,7 @@ MainWindow::~MainWindow()
 }
 
 
-bool MainWindow::checkIsNumber(QString xString, float *p)
+bool MainWindow::checkIsNumber(QString xString, float &numeroInput)
 {
     if(xString == "")
     {
@@ -25,7 +25,7 @@ bool MainWindow::checkIsNumber(QString xString, float *p)
         return false;
     }
     bool isNumber = true;
-    *p = xString.toFloat(&isNumber);
+    numeroInput = xString.toFloat(&isNumber);
     if(!isNumber)
     {
         QMessageBox::warning(this,"Warning","Wrong number");
@@ -49,7 +49,7 @@ void MainWindow::on_squareButton_released()
 void MainWindow::on_doubleButton_released()
 {
     float result;
-    if(checkIsNumber(ui->inputEdit->text(), &result))
+    if(checkIsNumber(ui->inputEdit->text(), result))
     {
         Sum mySumLib;
         //float x = ui->inputEdit->text().toFloat();
