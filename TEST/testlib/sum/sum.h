@@ -7,7 +7,7 @@ class Sum
 public:
     Sum();
 
-    void test(float *x);
+    void test(float &valoreSomma);
 };
 
 #endif // SUM_H

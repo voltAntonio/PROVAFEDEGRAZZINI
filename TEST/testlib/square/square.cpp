@@ -5,7 +5,7 @@ Square::Square()
 }
 
 
-void Square::test(float &numero)
+void Square::test(float &valoreQuadrato)
 {
-    numero = numero * numero;
+    valoreQuadrato = valoreQuadrato * valoreQuadrato;
 }

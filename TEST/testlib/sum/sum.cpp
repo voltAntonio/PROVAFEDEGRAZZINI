@@ -4,7 +4,7 @@ Sum::Sum()
 {
 }
 
-void Sum::test(float *p)
+void Sum::test(float &valoreSomma)
 {
-    *p = *p + *p;
+    valoreSomma = valoreSomma + valoreSomma;
 }

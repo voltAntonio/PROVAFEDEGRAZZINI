@@ -17,7 +17,7 @@ MainWindow::~MainWindow()
 }
 
 
-bool MainWindow::checkIsNumber(QString xString, float &numeroInput)
+bool MainWindow::checkIsNumber(QString xString, float &valoreInput)
 {
     if(xString == "")
     {
@@ -25,7 +25,7 @@ bool MainWindow::checkIsNumber(QString xString, float &numeroInput)
         return false;
     }
     bool isNumber = true;
-    numeroInput = xString.toFloat(&isNumber);
+    valoreInput = xString.toFloat(&isNumber);
     if(!isNumber)
     {
         QMessageBox::warning(this,"Warning","Wrong number");
@@ -36,11 +36,11 @@ bool MainWindow::checkIsNumber(QString xString, float &numeroInput)
 void MainWindow::on_squareButton_released()
 {
     float result;
-    if(checkIsNumber(ui->inputEdit->text(), &result))
+    if(checkIsNumber(ui->inputEdit->text(), result))
     {
         Square mySquareLib;
         //float x = ui->inputEdit->text().toFloat();
-        mySquareLib.test(&result);
+        mySquareLib.test(result);
         ui->outputEdit->setText(QString::number(result));
     }
 }
@@ -53,7 +53,7 @@ void MainWindow::on_doubleButton_released()
     {
         Sum mySumLib;
         //float x = ui->inputEdit->text().toFloat();
-        mySumLib.test(&result);
+        mySumLib.test(result);
         ui->outputEdit->setText(QString::number(result));
     }
 }
