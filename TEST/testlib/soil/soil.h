@@ -1,13 +1,18 @@
 #ifndef SOIL_H
 #define SOIL_H
 
+#define NODATA -9999
 
-class  Soil
+class  SoilTexture
 {
 public:
-    Soil();
+    double sand, silt, clay; // in %
 
-    void test(float numero);
+    SoilTexture ();
 };
 
+bool checkTexture(const SoilTexture &mySoilTexture);
+
+
 #endif // SOIL_H
+

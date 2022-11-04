@@ -1,11 +1,14 @@
 #include "soil.h"
 
-Soil::Soil()
+SoilTexture::SoilTexture()
 {
+    this->clay = NODATA;
+    this->sand = NODATA;
+    this->silt =NODATA;
 }
 
 
-void Soil::test(float numero)
+bool checkTexture(SoilTexture* texture)
 {
-    numero = numero * numero;
+    return ((texture->clay + texture->silt + texture->sand) >= 99 && (texture->clay + texture->silt + texture->sand)<= 101) ? true : false;
 }
