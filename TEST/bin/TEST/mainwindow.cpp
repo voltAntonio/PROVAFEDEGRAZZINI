@@ -3,6 +3,7 @@
 #include "QMessageBox"
 #include "square.h"
 #include "sum.h"
+#include "soil.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
