@@ -16,11 +16,13 @@ public:
     ~MainWindow();
 
 private slots:
-    bool checkIsNumber(QString xString, float &numeroInput);
+    bool checkIsNumber(QString xString, QString field, float &numeroInput);
 
     void on_squareButton_released();
 
     void on_doubleButton_released();
+
+    void on_textureButton_released();
 
 private:
     Ui::MainWindow *ui;

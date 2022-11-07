@@ -1,4 +1,5 @@
 #include "soil.h"
+#include "cmath"
 
 SoilTexture::SoilTexture()
 {
@@ -8,7 +9,8 @@ SoilTexture::SoilTexture()
 }
 
 
-bool checkTexture(SoilTexture* texture)
+bool checkTexture(const SoilTexture &mySoilTexture, double tollerance)
 {
-    return ((texture->clay + texture->silt + texture->sand) >= 99 && (texture->clay + texture->silt + texture->sand)<= 101) ? true : false;
+    double sum = (mySoilTexture.clay + mySoilTexture.silt + mySoilTexture.sand);
+    return (abs(sum-100) < tollerance);
 }

@@ -76,6 +76,88 @@
      <string>Insert number</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="textureButton">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>430</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Check</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="clayEdit">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>380</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="siltEdit">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>430</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="sandEdit">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>490</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>360</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Clay (%)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>410</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Silt (%)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>470</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sand (%)</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
