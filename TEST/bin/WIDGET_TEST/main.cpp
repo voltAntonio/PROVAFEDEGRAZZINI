@@ -5,7 +5,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Crit3DSoilWidget w;
+    FirstWidget w;
     w.show();
 
     return a.exec();

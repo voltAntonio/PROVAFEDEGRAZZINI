@@ -1,10 +1,3 @@
-#-----------------------------------------------------------
-#
-#   SOIL EDITOR
-#   This project is part of CRITERIA1D distribution
-#
-#-----------------------------------------------------------
-
 QT       += core gui widgets charts sql
 
 TEMPLATE = app
@@ -13,41 +6,31 @@ CONFIG += debug_and_release
 
 unix:{
     CONFIG(debug, debug|release) {
-        TARGET = debug/SOIL_EDITOR
+        TARGET = debug/WIDGET_TEST
     } else {
-        TARGET = release/SOIL_EDITOR
+        TARGET = release/WIDGET_TEST
     }
 }
 macx:{
     CONFIG(debug, debug|release) {
-        TARGET = debug/SOIL_EDITOR
+        TARGET = debug/WIDGET_TEST
     } else {
-        TARGET = release/SOIL_EDITOR
+        TARGET = release/WIDGET_TEST
     }
 }
 win32:{
-    TARGET = SOIL_EDITOR
+    TARGET = WIDGET_TEST
 }
 
-INCLUDEPATH +=  ../../agrolib/crit3dDate ../../agrolib/mathFunctions  \
-                ../../agrolib/utilities ../../agrolib/soil \
-                ../../agrolib/commonChartElements ../../agrolib/soilWidget
+INCLUDEPATH +=  ../../testlib/firstWidget ../../testlib/soil
 
 CONFIG(debug, debug|release) {
-    LIBS += -L../../agrolib/soilWidget/debug -lsoilWidget
-    LIBS += -L../../agrolib/commonChartElements/debug -lcommonChartElements
-    LIBS += -L../../agrolib/soil/debug -lsoil
-    LIBS += -L../../agrolib/utilities/debug -lutilities
-    LIBS += -L../../agrolib/mathFunctions/debug -lmathFunctions
-    LIBS += -L../../agrolib/crit3dDate/debug -lcrit3dDate
+    LIBS += -L../../testlib/firstWidget/debug -lfirstWidget
+    LIBS += -L../../testlib/soil/debug -lsoil
 } else {
 
-    LIBS += -L../../agrolib/soilWidget/release -lsoilWidget
-    LIBS += -L../../agrolib/commonChartElements/release -lcommonChartElements
-    LIBS += -L../../agrolib/soil/release -lsoil
-    LIBS += -L../../agrolib/utilities/release -lutilities
-    LIBS += -L../../agrolib/mathFunctions/release -lmathFunctions
-    LIBS += -L../../agrolib/crit3dDate/release -lcrit3dDate
+    LIBS += -L../../testlib/firstWidget/release -lfirstWidget
+    LIBS += -L../../testlib/soil/release -lsoil
 }
 
 
