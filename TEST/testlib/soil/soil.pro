@@ -30,7 +30,6 @@ win32:{
 }
 
 SOURCES += \
-    prova.cpp \
     soil.cpp
 
 HEADERS += \
