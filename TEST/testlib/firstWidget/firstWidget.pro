@@ -1,3 +1,5 @@
+QT  += widgets sql charts
+
 CONFIG -= core gui
 
 TEMPLATE = lib
@@ -7,22 +9,24 @@ CONFIG += staticlib
 
 CONFIG += c++11
 
+INCLUDEPATH +=  ../../testlib/soil
+
 CONFIG += debug_and_release
 QMAKE_CXXFLAGS += -std=c++11
 
 unix:{
     CONFIG(debug, debug|release) {
-        TARGET = debug/sum
+        TARGET = debug/firstWidget
     } else {
-        TARGET = release/sum
+        TARGET = release/firstWidget
     }
 }
 win32:{
-    TARGET = sum
+    TARGET = firstWidget
 }
 
 SOURCES += \
-    sum.cpp
+    firstWidget.cpp
 
 HEADERS += \
-    sum.h
+    firstWidget.h

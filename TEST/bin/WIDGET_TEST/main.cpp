@@ -1,6 +1,6 @@
 #include <QApplication>
 
-#include "soilWidget.h"
+#include "firstWidget.h"
 
 int main(int argc, char *argv[])
 {

@@ -1,13 +1,25 @@
-#ifndef SUM_H
-#define SUM_H
+#ifndef FIRSTWIDGET_H
+#define FIRSTWIDGET_H
 
+#include <QWidget>
+#include <QComboBox>
+#include <QLabel>
+#include <QPushButton>
+#include <QGridLayout>
 
-class Sum
+class FirstWidget: public QWidget
 {
-public:
-    Sum();
+    Q_OBJECT
 
-    void test(float &valoreSomma);
+    public:
+        FirstWidget();
+    private:
+        QLineEdit* clayValue;
+        QLineEdit* siltValue;
+        QLineEdit* sandValue;
+
+        bool checkIsNumber(QString xString, QString field, float &numeroInput);
+        void checkSoil();
 };
 
-#endif // SUM_H
+#endif // FIRSTWIDGET_H
