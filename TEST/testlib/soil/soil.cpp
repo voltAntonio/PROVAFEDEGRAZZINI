@@ -9,8 +9,8 @@ SoilTexture::SoilTexture()
 }
 
 
-bool checkTexture(const SoilTexture &mySoilTexture, double tollerance)
+bool checkTexture(const SoilTexture &mySoilTexture, double &currentSum, double tollerance)
 {
-    double sum = (mySoilTexture.clay + mySoilTexture.silt + mySoilTexture.sand);
-    return (fabs(sum - 100.0) <= tollerance);
+    currentSum = (mySoilTexture.clay + mySoilTexture.silt + mySoilTexture.sand);
+    return (fabs(currentSum - 100.0) <= tollerance);
 }

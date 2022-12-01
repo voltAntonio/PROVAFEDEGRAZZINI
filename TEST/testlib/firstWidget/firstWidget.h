@@ -2,10 +2,7 @@
 #define FIRSTWIDGET_H
 
 #include <QWidget>
-#include <QComboBox>
-#include <QLabel>
-#include <QPushButton>
-#include <QGridLayout>
+#include <QLineEdit>
 
 class FirstWidget: public QWidget
 {
@@ -17,6 +14,7 @@ class FirstWidget: public QWidget
         QLineEdit* clayValue;
         QLineEdit* siltValue;
         QLineEdit* sandValue;
+        QLineEdit* tolleranza;
 
         bool checkIsNumber(QString xString, QString field, float &numeroInput);
         void checkSoil();

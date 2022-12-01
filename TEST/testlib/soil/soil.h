@@ -11,7 +11,7 @@ public:
     SoilTexture ();
 };
 
-bool checkTexture(const SoilTexture &mySoilTexture, double tollerance);
+bool checkTexture(const SoilTexture &mySoilTexture, double &currentSum, double tollerance);
 
 
 #endif // SOIL_H

@@ -1,4 +1,4 @@
-QT  += widgets sql charts
+QT  += widgets
 
 CONFIG -= core gui
 
